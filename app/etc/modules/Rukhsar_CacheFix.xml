@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Rukhsar_CacheFix>
+            <codePool>local</codePool>
+            <active>true</active>
+        </Rukhsar_CacheFix>
+    </modules>
+</config>

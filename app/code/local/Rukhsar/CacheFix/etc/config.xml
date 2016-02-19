@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Rukhsar_CacheFix>
+            <version>1.0.0</version>
+        </Rukhsar_CacheFix>
+    </modules>
+    <global>
+        <models>
+            <CacheFix>
+                <class>Rukhsar_CacheFix_Model</class>
+            </CacheFix>
+        </models>
+    </global>
+    <adminhtml>
+        <events>
+            <controller_action_postdispatch_adminhtml_catalog_product_save>
+                <observers>
+                    <CacheFix>
+                        <type>singleton</type>
+                        <class>CacheFix/observer</class>
+                        <method>BlockCacheFix</method>
+                    </CacheFix>
+                </observers>
+            </controller_action_postdispatch_adminhtml_catalog_product_save>
+        </events>
+    </adminhtml>
+</config>
